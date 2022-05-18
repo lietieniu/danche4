@@ -1,0 +1,76 @@
+@import url('../../style/default.less');
+
+.header {
+    background-color: colorM;
+
+    .header1-left {
+        width:100%;
+        height: 62px;
+        line-height: 62px;
+        text-align: center;
+        background-color: #1890ff;
+
+        img {
+            height: 62px;
+            vertical-align: top;
+        }
+        span{
+            margin-left: 25px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+
+    .header1 {
+        text-align: right;
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+        padding: 0 50px;
+
+        // border-bottom: 1px solid #f9c700;
+        span {
+            font-weight: bold;
+            font-size: 17px;
+            margin-right: 20px;
+        }
+    }
+
+    ;
+
+    .header2 {
+        border-top: 1px solid #f9c700;
+        height: 42px;
+        line-height: 42px;
+
+        .header2-left {
+            text-align: center;
+            font-size: 19px;
+
+            h2 {
+                font-weight: 500;
+
+                &::after {
+                    content: '';
+                    border-top: 30px solid @colorM;
+                    border-left: 25px solid transparent;
+                    border-right: 25px solid transparent;
+                    position: absolute;
+                    left: 138px;
+                    top: 30px;
+                }
+            }
+        }
+
+        .header2-right {
+            text-align: right;
+            font-size: 18px;
+
+            h2 {
+                font-weight: bold;
+                margin-right: 80px;
+            }
+        }
+    }
+}

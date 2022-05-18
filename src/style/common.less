@@ -1,0 +1,58 @@
+@import url('../style/default.less');
+@import url('./loading.less');
+
+.clearfix {
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+        visibility: hidden;
+    }
+}
+
+
+.simple-page {
+    .header-top {
+        background: #1890ff;
+        color: @colorM;
+        width: calc(100vw);
+    }
+
+}
+
+.container {
+    display: flex;
+
+    .left {
+        width: 15%;
+        min-width: 180px;
+        height: calc(100vh);
+        background-color: #001529;
+    }
+
+    .right {
+        flex: 1;
+        width: 85%;
+        overflow: auto;
+        height: calc(100vh);
+
+        .content {
+            width: 100%;
+            background-color: @colorL;
+            padding: 20px;
+
+        }
+    }
+}
+.common{
+    width: 100%;
+    background-color:#1890ff;
+    .header1{
+        height: 62px;
+        line-height: 62px;
+        padding-right: 70px;
+        span{
+            color: #fff;
+        }
+    }
+}
