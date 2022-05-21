@@ -91,7 +91,7 @@ const getOption2 = () => {
                     }
                 },
                 labelLine: {
-                    show: false
+                    show: true
                 },
                 data: [
                     { value: 1048, name: 'Search Engine' },
@@ -99,7 +99,7 @@ const getOption2 = () => {
                     { value: 580, name: 'Email' },
                     { value: 484, name: 'Union Ads' },
                     { value: 300, name: 'Video Ads' }
-                ]
+                ],
             }
         ]
     };
@@ -111,9 +111,11 @@ const getOption3 = () => {
             text: "日出口量"
         },
         legend: {
-            left: '50px',
-            top: "middle",
-            orient: 'vertial'
+            // right:"60px",
+            // top: "23px",
+            // orient: 'vertial'
+            top:"top",
+            origin:'horizontal'
         },
         tooltip: {
             trigger: 'item',
@@ -132,7 +134,7 @@ const getOption3 = () => {
             {
                 name: '出口量',
                 type: 'pie',
-                radius: [50, 200],
+                radius: [50, 170],
                 center: ['50%', '50%'],
                 roseType: 'area',
                 itemStyle: {
