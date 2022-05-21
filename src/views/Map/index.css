@@ -1,0 +1,19 @@
+.card {
+  width: calc(82.5vw);
+  padding: 0;
+}
+.car {
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+.car .carNum {
+  padding: 12px;
+  color: red;
+  font-size: 22px;
+  font-weight: 400;
+}
+.map1 {
+  text-align: center;
+  width: 100%;
+  height: 550px;
+}

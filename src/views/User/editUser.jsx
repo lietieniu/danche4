@@ -35,7 +35,7 @@ const EditUser = (props) => {
         //   console.log("value",value)
         axios.ajax({
             url: 'edit/user',
-            data: { value }
+            data: value
         }).then((res) => {
             if (res.code == 0) {
                 setEditShow(false);

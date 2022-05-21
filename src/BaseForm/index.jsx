@@ -60,14 +60,14 @@ const BaseForm = (props) => {
                         label={label}
                         key={name}
                         rules={[{ required: true, message: message }]}
-                        
+
                     >
-                        <DatePicker 
-                        showNow
-                        style={{width:width}} 
-                        placeholder="请选择时间"
-                        //defaultPickerValue={moment().format('MMMM Do YYYY, h:mm:ss a')}
-                        format='YYYY-MM-DD'
+                        <DatePicker
+                            showNow
+                            style={{ width: width }}
+                            placeholder="请选择时间"
+                            //defaultPickerValue={moment().format('MMMM Do YYYY, h:mm:ss a')}
+                            format='YYYY-MM-DD'
                         />
                     </Form.Item>
                     { ItemList.push(TIME) }
@@ -95,7 +95,10 @@ const BaseForm = (props) => {
 
         //获取表单选中的值,将其传递给父组件，进行后台传递
         props.filterSubmit(value);
-        form.resetFields() //数据完成后表单清空
+        //数据完成后表单清空
+        if (props.flag) {
+            form.resetFields()
+        }
     }
     return (
         <div>

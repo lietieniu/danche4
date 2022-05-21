@@ -16,7 +16,7 @@ const Admin = (props) => {
                 <Col className="right">
                     <Header />
                     <Row className="content">
-                       {props.children}
+                        {props.children}
                     </Row>
                     <Footer />
                 </Col>

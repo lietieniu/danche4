@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import './index.less';
 import { Card, Button, message, Modal } from "antd";
-import {PlusOutlined,InfoOutlined,EditOutlined,CloseOutlined} from '@ant-design/icons'
+import { PlusOutlined, InfoOutlined, EditOutlined, CloseOutlined } from '@ant-design/icons'
 //1.表单封装
 import BaseForm from '../../BaseForm/index';
 //2.表格封装
@@ -49,11 +49,16 @@ const User = () => {
     const filterSubmit = (data) => {
         //    console.log("data",data)
         axios.ajax({
-            url: "search/user",
+            // url: "search/user",
+            url: "user/list",
             data: { data }
         }).then((res) => {
             if (res.code == 0) {
                 message.success("查询成功")
+                res.result.user_list.map((item, index) => {
+                    item.key = index;
+                });
+                setDataSource(res.result.user_list)
             }
         })
     };

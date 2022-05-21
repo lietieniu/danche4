@@ -14,6 +14,14 @@ import Common from "./Common";
 import OrderDetail from './views/Order/orderDetail'
 //4.员工管理
 import User from "./views/User";
+//5.车辆地图管理
+import Map from "./views/Map";
+//6.1图表-柱形图
+import Bar from "./views/Echarts/Bar";
+//6.2折线图
+import Line from "./views/Echarts/Line";
+//6.3饼图
+import Pie from "./views/Echarts/Pie";
 
 const Router1 = () => {
     return (
@@ -24,7 +32,7 @@ const Router1 = () => {
                         <Route path='/Common' render={() =>
                             <Common>
                                 <Switch>
-                                    <Route exact={true} path='/Common/OrderDetail/:orderId' component={OrderDetail}/>
+                                    <Route exact={true} path='/Common/OrderDetail/:orderId' component={OrderDetail} />
                                 </Switch>
                             </Common>
                         } />
@@ -35,7 +43,11 @@ const Router1 = () => {
                                     <Route exact={true} path='/Home' component={Home} />
                                     <Route exact={true} path='/city' component={City} />
                                     <Route exact={true} path='/order' component={Order} />
-                                    <Route exact={true} path='/user' component={User}/>
+                                    <Route exact={true} path='/user' component={User} />
+                                    <Route exact={true} path='/bikeMap' component={Map} />
+                                    <Route exact={true} path='/charts/bar' component={Bar} />
+                                    <Route exact={true} path='/charts/line' component={Line} />
+                                    <Route exact={true} path="/charts/pie" component={Pie}/>
                                     <Route component={NoMatch} />
                                 </Switch>
                             </Admin>
