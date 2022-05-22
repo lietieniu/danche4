@@ -10,3 +10,4 @@ const App = (props) => {
 
 export default App;
 // 克隆练习
+// 克隆练习--方法二
